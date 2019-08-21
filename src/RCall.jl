@@ -6,11 +6,13 @@ using Dates
 using Libdl
 using Random
 using REPL
-using Missings
+if VERSION ≤ v"1.1.1"
+   using Missings
+end
 using CategoricalArrays
 using DataFrames
+using StatsModels
 
-import StatsModels: Formula, parse!
 import DataStructures: OrderedDict
 
 import Base: eltype, convert, isascii,
